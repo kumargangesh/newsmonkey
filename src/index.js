@@ -1,17 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import ClassComponent from './Component-Pratcise/ClassComponent';
+// import FunctionalComponent from './Component-Pratcise/FunctionalComponent';
+// import NavBar from './Component-Pratcise/NavBar';
+// import TextArea from './Component-Pratcise/TextArea';
+import DarkMode from './Dark-Mode/DarkMode';
+import NavBar from './Dark_Light-Mode-NavBar/NavBar';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+ReactDOM.render(<NavBar />,document.getElementById("root"));
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
