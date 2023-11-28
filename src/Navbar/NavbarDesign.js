@@ -77,11 +77,11 @@ function NavbarDesign(props) {
           <div class="form-check form-switch">
             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={changeMode} />
           </div>
+          <Link to="/"><div className='home' onClick={closeDiv}>HOME</div></Link>
           <Link to="/aboutme"><div className='home' onClick={closeDiv}>ABOUT ME</div></Link>
           <Link to="/skills"><div className='home' onClick={closeDiv}>SKILLS</div></Link>
           <Link to="/projects"><div className='home' onClick={closeDiv}>PROJECTS</div></Link>
           <Link to="/contactme"><div className='home' onClick={closeDiv}>CONTACT ME</div></Link>
-          <Link to="/"><div className='home' onClick={closeDiv}>HOME</div></Link>
         </div>
       </div>
     </div>

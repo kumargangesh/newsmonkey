@@ -20,15 +20,15 @@ function NavbarLinks() {
     });
 
   return (
-    <Router basename='/Navbar'>
+    <Router>
         <div>
             <NavbarDesign design={dataDesign} toggleDesign={setDataDesign} divBack={divBack} setDivBack={setDivBack} />
             <Routes>
+                <Route path="/" element={<Home heading="HOME" data={value} design={dataDesign}  divBack={divBack} /> } />
                 <Route path="/aboutme" element={<AboutMe heading="ABOUT ME" data={value} design={dataDesign} divBack={divBack} /> } />
                 <Route path="/skills" element={<Skills heading="SKILLS" data={value} design={dataDesign} divBack={divBack} /> }  />
                 <Route path="/projects" element={<Projects heading="PROJECTS" data={value} design={dataDesign}  divBack={divBack} /> } />
                 <Route path="/contactme" element={<ContactMe heading="CONTACT ME" data={value} design={dataDesign}  divBack={divBack} /> } />
-                <Route path="/Navbar" element={<Home heading="HOME" data={value} design={dataDesign}  divBack={divBack} /> } />
             </Routes>
         </div>
     </Router>
