@@ -12,17 +12,17 @@ class FrontPage extends Component {
   }
 
   async componentDidMount(){
-      // let url = "https://www.omdbapi.com/?s=avengers&apikey=5f315efc";
-      // let data = await fetch(url);
-      // let parsedData = await data.json();
-      // console.log(parsedData.Search);
-      // this.setState({Movies:parsedData.Search});
-
-      let url = "https://newsapi.org/v2/everything?q=bitcoin&apiKey=7170c63a57604df9af3272078490ac14";
+      let url = "https://www.omdbapi.com/?s=avengers&apikey=5f315efc";
       let data = await fetch(url);
       let parsedData = await data.json();
-      console.log(parsedData.articles);
-      this.setState({Movies : parsedData.articles});
+      console.log(parsedData.Search);
+      this.setState({Movies:parsedData.Search});
+
+      // let url = "https://newsapi.org/v2/everything?q=bitcoin&apiKey=7170c63a57604df9af3272078490ac14";
+      // let data = await fetch(url);
+      // let parsedData = await data.json();
+      // console.log(parsedData.articles);
+      // this.setState({Movies : parsedData.articles});
 
   }
 
@@ -35,7 +35,7 @@ class FrontPage extends Component {
           {this.state.Movies.map((element)=>{
               return(
                 <div className="col-md-4">
-                    <NewsComponent title={element.title} description={element.description} imageURL={element.urlToImage} newsURL={element.url}/>
+                    <NewsComponent title={element.Title} description={element.Year} imageURL={element.Poster}/>
                   </div>
               );
           })}
